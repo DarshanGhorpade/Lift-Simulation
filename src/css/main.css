@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/*CSS VARIABLES*/
+
+body {
+  font-size: 1.6rem;
+}
+
+:root {
+  --PRIMARY-COLOR: #06283d;
+  --ERROR-COLOR: red;
+  --LIFT-COLOR: blue;
+  --LIFT-BORDER-COLOR: #000;
+  --LIGHT_COLOR: silver;
+  --VERY-LIGHT-COLOR: #dff6ff;
+  --COLOR-WHITE: #ffffff;
+  --INPUT-SECTION-BORDER-COLOR: #979797;
+  --INPUT-SECTION-BOX-SHADOW: inset 0px 0px 4px 2px rgb(255 255 255 / 66%);
+  --INPUT-SECTION-BG-COLOR: rgba(196, 196, 196, 0.42);
+}
+
+/*UTILITY CLASSES*/
+
+.md-1 {
+  margin: 1rem;
+}
+
+.pd-1 {
+  padding: 1rem;
+}
+
+/*STYLING MAIN*/
+
+.main {
+  display: flex;
+  padding: 2.8rem;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.input-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 50rem;
+  min-width: 30rem;
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.heading {
+  text-align: center;
+  margin: 1rem 1rem 4rem;
+  color: var(--PRIMARY-COLOR);
+}
+
+.form-container {
+  width: 50vw;
+  padding-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--INPUT-SECTION-BG-COLOR);
+  border: 1px solid var(--INPUT-SECTION-BORDER-COLOR);
+  border-radius: 5px;
+  margin: 0 auto;
+  min-width: 30rem;
+  max-width: 70rem;
+}
+.inputs {
+  border-radius: 5px;
+  border: 2px solid var(--PRIMARY-COLOR);
+  margin: 2rem;
+  width: 100%;
+  height: 3.6rem;
+  padding: 1rem;
+}
+
+.inputs:focus {
+  background-color: var(--VERY-LIGHT-COLOR);
+  border: var(--PRIMARY-COLOR);
+}
+
+.input-container > label {
+  font-weight: 500;
+  text-align: center;
+  align-self: flex-start;
+  margin-left: 1.6rem;
+}
+
+#btn-generate,
+.btn-up,
+.btn-down {
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 2.4rem;
+  border: 1px solid black;
+  opacity: 0.9;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+#btn-generate {
+  margin-bottom: 4rem;
+  background-color: black;
+  color: #ffffff;
+}
+#btn-generate:hover,
+.btn-up:hover,
+.btn-down:hover {
+  opacity: 1;
+}
+
+.btn-up {
+  background-color: green;
+  width: 8rem;
+}
+
+.btn-down {
+  background-color: yellow;
+  width: 8rem;
+  margin-bottom: 20px;
+}
+
+/*STYLING FLOORS*/
+.floors {
+  padding-bottom: 4rem;
+  overflow-x: auto;
+}
+
+.floor {
+  height: 140px;
+  display: flex;
+  overflow: visible;
+  align-items: center;
+  border-bottom: 4px solid var(--PRIMARY-COLOR);
+  padding: 1rem 2rem 0.6rem;
+}
+
+.floor-number {
+  font-weight: 500;
+  padding-right: 1rem;
+}
+.lift-controller {
+  display: flex;
+  flex-direction: column;
+}
+/*STYLING LIFTS*/
+
+.lift {
+  display: flex;
+  align-self: flex-end;
+  margin: 0 2rem;
+  background-color: var(--VERY-LIGHT-COLOR);
+  transition: transform 2s ease-out;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.lift-left {
+  height: 9.6rem;
+  width: 3.2rem;
+  background-color: var(--LIFT-COLOR);
+  border-radius: 4px 0 0 4px;
+  border: 2px solid var(--PRIMARY-COLOR);
+  transition: transform 2.5s ease-out;
+}
+
+.lift-right {
+  height: 9.6rem;
+  width: 3.2rem;
+  background-color: var(--LIFT-COLOR);
+  border-radius: 0 4px 4px 0;
+  border: 2px solid var(--PRIMARY-COLOR);
+  transition: transform 2.5s ease-out;
+}
+
+.open-lift-left {
+  transform: translateX(-100%);
+}
+
+.open-lift-right {
+  transform: translateX(100%);
+}
+
+/*STYLING ERROR DISPLAY*/
+
+.error-display {
+  margin: 0 auto;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  background-color: var(--ERROR-COLOR);
+  color: var(--COLOR-WHITE);
+  width: 36rem;
+  height: 4rem;
+  transition: al 2s ease-in;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8rem;
+  background-color: var(--PRIMARY-COLOR);
+}
+
+.footer a {
+  text-decoration: none;
+  padding-left: 1rem;
+  color: var(--COLOR-WHITE);
+}
+
+.footer a:hover {
+  color: var(--ERROR-COLOR);
+}
+
+.footer > img {
+  width: 28px;
+  height: 28px;
+}
