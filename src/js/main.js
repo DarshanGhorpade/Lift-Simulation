@@ -3,6 +3,7 @@ const lifts = document.getElementById("input-lifts");
 const inputContainer = document.getElementById("input-container");
 const btnGenerateLifts = document.getElementById("btn-generate");
 const errorDisplay = document.querySelector(".error-display");
+const mainElement = document.querySelector(".main");
 
 let noOfLifts;
 let noOfFloors;
@@ -187,6 +188,7 @@ lifts.addEventListener("input", () => {
 btnGenerateLifts.addEventListener("click", () => {
   if (validateInputs()) {
     errorDisplay.style.display = "none";
+    inputContainer.style.display = "none";
     generateFloors();
     fillLiftQueue();
   }
